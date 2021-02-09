@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace BasicServerHTTPlistener
+namespace MyBasicServerHTTPHeader
 {
     internal class Program
     {
@@ -63,14 +63,6 @@ namespace BasicServerHTTPlistener
                 // Obtain a response object.
                 HttpListenerResponse response = context.Response;
                 string responseString = null;
-
-
-                Console.WriteLine("\nHeader Data :");
-                for (int i = 0; i < request.Headers.Count; i++)
-                {
-                    Console.WriteLine(request.Headers.AllKeys[i] + " : " + request.Headers[i]);
-                }
-
 
                 if (request.HttpMethod == "GET")
                 {
