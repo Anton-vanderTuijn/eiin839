@@ -1,0 +1,1 @@
+echo Hello %1 et %2 Question 6
