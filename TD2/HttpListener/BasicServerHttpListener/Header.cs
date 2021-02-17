@@ -20,10 +20,12 @@ namespace BasicServerHTTPlistener
         private string from;
         private string host;
         private string date;
+        private string userAgent;
 
 
         public Header(HttpListenerRequest request)
         {
+
             mime = request.Headers.Get(HttpRequestHeader.Accept.ToString());
             charset = request.Headers.Get(HttpRequestHeader.AcceptCharset.ToString());
             encoding = request.Headers.Get(HttpRequestHeader.AcceptEncoding.ToString());
@@ -35,10 +37,12 @@ namespace BasicServerHTTPlistener
             from = request.Headers.Get(HttpRequestHeader.From.ToString());
             host = request.Headers.Get(HttpRequestHeader.Host.ToString());
             date = request.Headers.Get(HttpRequestHeader.Date.ToString());
+            userAgent = request.Headers.Get(HttpRequestHeader.UserAgent.ToString());
         }
 
         public void print()
         {
+            Console.WriteLine("############ Header ############");
             Console.WriteLine($"MIME : {mime}");
             Console.WriteLine($"Charset: {charset}");
             Console.WriteLine($"Encoding: {encoding}");
@@ -50,6 +54,8 @@ namespace BasicServerHTTPlistener
             Console.WriteLine($"From: {from}");
             Console.WriteLine($"Host: {host}");
             Console.WriteLine($"Date: {date}");
+            Console.WriteLine($"UserAgent: {userAgent}");
+            Console.WriteLine("############ Header ############");
         }
 
     }

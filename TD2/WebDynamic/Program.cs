@@ -139,19 +139,22 @@ namespace WebDynamic
                         responseString = (string)method.Invoke(c, arguments);
                     } else
                     {
-                        responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
+                        responseString = "<HTML><BODY> Hello world - Default response!</BODY></HTML>";
                     }
                 }
                 catch (Exception e)
                 {
-                    responseString = "<HTML><BODY> Hello world!</BODY></HTML>";
+                    responseString = "<HTML><BODY> Hello world - Default response!</BODY></HTML>";
                 }
 
-                // http://localhost:8080/1/2/3?param1=AAA&param2=BBB&param3=CCC
-                // http://localhost:8080/1/2/question4?param1=AAA&param2=BBB
-                // http://localhost:8080/1/2/execQ5?param1=AAA&param2=BBB
-                // http://localhost:8080/1/2/script?param1=AAA&param2=BBB
-                // http://localhost:8080/1/2/incr?val=5
+                // Examples :
+                // http://localhost:8080/q3/basic/3?param1=AAA&param2=BBB&param3=CCC
+                // http://localhost:8080/q4/method/question4?param1=AAA&param2=BBB
+                // http://localhost:8080/q5/exec/execQ5?param1=AAA&param2=BBB
+                // http://localhost:8080/q6/bat/script?param1=AAA&param2=BBB
+                // http://localhost:8080/q7/counter/increase?val=5
+                // http://localhost:8080/q7/counter/decrease?val=10
+                // http://localhost:8080/q7/secretnumber/guess?val=500
 
                 //###############################################################
 
