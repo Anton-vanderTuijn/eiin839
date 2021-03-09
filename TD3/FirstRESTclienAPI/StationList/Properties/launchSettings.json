@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StationList": {
+      "commandName": "Project",
+      "commandLineArgs": "Lyon"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StationInfo": {
+      "commandName": "Project",
+      "commandLineArgs": "Lyon 2010"
+    }
+  }
+}
